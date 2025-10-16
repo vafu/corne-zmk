@@ -1,16 +1,16 @@
-/ {
-    right_encoder: encoder_right {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>; // CHANGE THIS: Left A pin
-        b-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;  // CHANGE THIS: Left B pin
-        steps = <20>;
-        status = "okay";
-    };
-    gpio_keys {
-        compatible = "zmk,gpio-keys";
-        encoder_press_right: encoder_press_right {
-            gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // CHANGE THIS: Left push pin
-            label = "ENCODER_PRESS_RIGHT";
-        };
-    };
+#include "corne_encoders.dtsi" // Include the same shared template
+
+// Enable and configure the right-side hardware
+&encoder_right {
+    status = "okay";
+    a-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>; // CHANGE THIS: Right A pin
+    b-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;  // CHANGE THIS: Right B pin
+};
+
+&gpio_keys {
+    status = "okay";
+};
+
+&encoder_press_right {
+    gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // CHANGE THIS: Right push pin
 };

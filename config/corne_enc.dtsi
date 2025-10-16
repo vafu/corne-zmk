@@ -1,0 +1,26 @@
+/ {
+    // Define skeleton for the left encoder
+    encoder_left: encoder_1 {
+        compatible = "alps,ec11";
+        status = "disabled";
+    };
+
+    // Define skeleton for the right encoder
+    encoder_right: encoder_2 {
+        compatible = "alps,ec11";
+        status = "disabled";
+    };
+
+    // Define skeleton for GPIO keys (pushbuttons)
+    gpio_keys {
+        compatible = "zmk,gpio-keys";
+        status = "disabled";
+
+        encoder_press_left: encoder_press_left {
+            label = "ENCODER_PRESS_LEFT";
+        };
+        encoder_press_right: encoder_press_right {
+            label = "ENCODER_PRESS_RIGHT";
+        };
+    };
+};
