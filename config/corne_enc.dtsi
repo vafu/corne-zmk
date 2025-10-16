@@ -12,7 +12,7 @@
         steps = <80>;
         status = "disabled";
     };
-    gpio_keys {
+    gpio_keys: gpio_keys {
         compatible = "zmk,gpio-keys";
         encoder_press_left: encoder_press_left {
             label = "ENCODER_PRESS_LEFT";
