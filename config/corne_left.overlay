@@ -6,7 +6,7 @@
     b-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; 
 };
 
-&encoder_press_ {
+&encoder_press_left {
     status = "okay";
 };
 
