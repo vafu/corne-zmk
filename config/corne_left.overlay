@@ -1,4 +1,4 @@
-#include "corne_encoders.dtsi" 
+#include "corne_enc.dtsi" 
 
 &encoder_left {
     status = "okay";

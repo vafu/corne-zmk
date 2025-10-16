@@ -1,4 +1,4 @@
-#include "corne_encoders.dtsi" // Include the same shared template
+#include "corne_enc.dtsi" // Include the same shared template
 
 // Enable and configure the right-side hardware
 &encoder_right {
