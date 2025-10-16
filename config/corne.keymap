@@ -150,6 +150,11 @@
         // triggers-per-rotation = <20>;
     };
 
+    encoder_press_left: encoder_press_left {
+		compatible = "zmk,keymap-input-consumer";
+		label = "ENCODER_PRESS_LEFT";
+	};
+
     keymap {
         compatible = "zmk,keymap";
 
