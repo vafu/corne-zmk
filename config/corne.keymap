@@ -232,7 +232,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp K_NEXT K_PREVIOUS >,
-                <&inc_dec_kp K_NEXT K_PREVIOUS >,
+                <&inc_dec_kp K_NEXT K_PREVIOUS >;
 
             label = "Media";
         };
