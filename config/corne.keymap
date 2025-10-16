@@ -160,12 +160,12 @@
 &none  &hm_l LGUI A  &hm_l LCTRL S  &hm_l LALT D  &hm_shift_l LSHFT F  &kp G           &kp H        &hm_shift_r RSHFT J  &hm_r RIGHT_ALT K   &hm_r RCTRL L  &hm_r RGUI SEMI  &none
 &none  &kp Z         &kp X          &kp C         &kp V                &kp B           &kp N        &kp M                &kp COMMA           &kp DOT        &kp FSLH         &none
                                     &mo 5         &lt 1 SPACE          &lt 4 ESCAPE    &lt 4 ENTER  &lt 2 BSPC           &lt 6 LOCKING_CAPS 
-                                                                       &kp A     &lt 7 LC(W)
+                                                                       &kp A     &lt 8 LC(W)
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp PG_UP PAGE_DOWN>;
+                <&inc_dec_kp PAGE_DOWN PG_UP>;
         };
 
         lower_layer {
@@ -220,8 +220,32 @@
 
             label = "number";
         };
+        mouse {
+            bindings = <
+&none  &none     &none      &none         &none      &none    &msc SCRL_UP    &none           &mmv MOVE_UP     &none            &none         &none
+&none  &kp LGUI  &kp LCTRL  &kp LEFT_ALT  &kp LSHFT  &none    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mmv MOVE_UP  &none
+&none  &none     &none      &none         &none      &none    &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &none            &none         &none
+                            &none         &none      &none    &mkp LCLK       &mkp MCLK       &mkp RCLK
+                                          &trans &trans
+            >;
 
-                Media {
+            sensor-bindings = <&etch_y>, <&etch_x>;
+
+            label = "Mouse";
+        };
+
+        WM {
+            bindings = <
+&trans  &trans    &trans     &trans        &trans      &trans    &trans  &kp LG(N7)        &kp LG(N8)        &kp LG(N9)        &trans  &trans
+&trans  &kp LCMD  &kp LCTRL  &kp LEFT_ALT  &kp LSHIFT  &trans    &trans  &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &trans  &trans
+&trans  &trans    &trans     &trans        &trans      &trans    &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans
+                             &trans        &trans      &trans    &trans  &trans            &trans
+                                                       &trans    &trans
+            >;
+
+            label = "WM";
+        }; 
+        Media {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
@@ -237,19 +261,6 @@
             label = "Media";
         };
 
-        mouse {
-            bindings = <
-&none  &none     &none      &none         &none      &none    &msc SCRL_UP    &none           &mmv MOVE_UP     &none            &none         &none
-&none  &kp LGUI  &kp LCTRL  &kp LEFT_ALT  &kp LSHFT  &none    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mmv MOVE_UP  &none
-&none  &none     &none      &none         &none      &none    &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &none            &none         &none
-                            &none         &none      &none    &mkp LCLK       &mkp MCLK       &mkp RCLK
-                                          &trans &trans
-            >;
-
-            sensor-bindings = <&etch_y>, <&etch_x>;
-
-            label = "Mouse";
-        };
 
         browser {
             bindings = <
@@ -266,16 +277,5 @@
                 <&inc_dec_kp LC(PG_UP) LC(PAGE_DOWN)>;
         };
 
-        WM {
-            bindings = <
-&trans  &trans    &trans     &trans        &trans      &trans    &trans  &kp LG(N7)        &kp LG(N8)        &kp LG(N9)        &trans  &trans
-&trans  &kp LCMD  &kp LCTRL  &kp LEFT_ALT  &kp LSHIFT  &trans    &trans  &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &trans  &trans
-&trans  &trans    &trans     &trans        &trans      &trans    &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans
-                             &trans        &trans      &trans    &trans  &trans            &trans
-                                                       &trans    &trans
-            >;
-
-            label = "WM";
-        };
     };
 };
