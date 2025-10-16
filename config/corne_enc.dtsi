@@ -12,4 +12,9 @@
         steps = <80>;
         status = "disabled";
     };
+
+zephyr_udc0: &usbd {
+    status = "okay";
+};
+
 };
