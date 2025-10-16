@@ -13,10 +13,6 @@
         status = "disabled";
     };
 
-    chosen {
-        zmk,kscan = &gpio_keys;
-    };
-
     gpio_keys: gpio_keys {
         compatible = "zmk,gpio-keys";
         status = "disabled";
