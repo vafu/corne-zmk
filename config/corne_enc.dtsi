@@ -34,7 +34,7 @@
         };
         direct {
             kscan = <&gpio_keys>;
-        }
+        };
     };
 
 };
