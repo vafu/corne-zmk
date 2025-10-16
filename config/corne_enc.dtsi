@@ -12,24 +12,29 @@
         steps = <80>;
         status = "disabled";
     };
-    gpio_keys: gpio_keys {
-    compatible = "zmk,gpio-keys";
-    status = "disabled";
-    encoder_press_left: encoder_press_left {
-        label = "ENCODER_PRESS_LEFT";
+    gpio_keys {
+        compatible = "zmk,gpio-keys";
+        encoder_press_left: encoder_press_left {
+            label = "ENCODER_PRESS_LEFT";
+        };
+
+        encoder_press_right: encoder_press_right {
+            label = "ENCODER_PRESS_RIGHT";
+        };
     };
 
-    encoder_press_right: encoder_press_right {
-        label = "ENCODER_PRESS_RIGHT";
-    };
-    };
     chosen {
         zmk,kscan = &kscan_composite;
     };
 
     kscan_composite: kscan_composite {
         compatible = "zmk,kscan-composite";
-        kscans = <&kscan0 &gpio_keys>;
+        matrix {
+            kscan = <&kscan0>;
+        };
+        direct {
+            kscan = <&gpio_keys>;
+        }
     };
 
 };
