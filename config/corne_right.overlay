@@ -9,5 +9,4 @@
 
 &encoder_press_right {
     status = "okay";
-}
-
+};
