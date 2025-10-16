@@ -9,4 +9,5 @@
 
 &encoder_press_right {
     status = "okay";
+    gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 };

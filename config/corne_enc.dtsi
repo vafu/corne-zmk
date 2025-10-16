@@ -14,16 +14,14 @@
     };
 
     encoder_press_left: encoder_press_left {
-        compatible = "zmk,kscan-gpio-direct";
-        input-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; 
-        label = "ENCODER_PRESS_LEFT";
+        compatible = "zmk,gpio-keys";
         status = "disabled";
+        label = "ENCODER_PRESS_LEFT";
     };
 
     encoder_press_right: encoder_press_right {
-            compatible = "zmk,kscan-gpio-direct";
-            input-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-            label = "ENCODER_PRESS_RIGHT";
-            status = "disabled";
+        compatible = "zmk,gpio-keys";
+        status = "disabled";
+        label = "ENCODER_PRESS_RIGHT";
     };
 };
