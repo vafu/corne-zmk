@@ -14,7 +14,7 @@
     };
 
     chosen {
-        zmk,kscan = &direct_composite;
+        zmk,kscan = &direct_keys;
     };
 
         direct_keys: direct_keys {
