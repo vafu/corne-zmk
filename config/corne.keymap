@@ -160,7 +160,7 @@
 &none  &hm_l LGUI A  &hm_l LCTRL S  &hm_l LALT D  &hm_shift_l LSHFT F  &kp G           &kp H        &hm_shift_r RSHFT J  &hm_r RIGHT_ALT K   &hm_r RCTRL L  &hm_r RGUI SEMI  &none
 &none  &kp Z         &kp X          &kp C         &kp V                &kp B           &kp N        &kp M                &kp COMMA           &kp DOT        &kp FSLH         &none
                                     &mo 5         &lt 1 SPACE          &lt 4 ESCAPE    &lt 4 ENTER  &lt 2 BSPC           &lt 6 LOCKING_CAPS 
-                                                                       &lt 5 C_MUTE     &lt 7 LC(W)
+                                                                       &kp A     &lt 7 LC(W)
             >;
 
             sensor-bindings =
