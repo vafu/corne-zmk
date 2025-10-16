@@ -7,10 +7,12 @@
     b-gpios = <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // CHANGE THIS: Right B pin
 };
 
-// &gpio_keys {
-//     status = "okay";
-// };
-//
-// &encoder_press_right {
-//     gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // CHANGE THIS: Right push pin
-// };
+/ {
+    gpio_keys {
+        compatible = "zmk,gpio-keys";
+        encoder_press_right: encoder_press_right {
+            gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // CHANGE THIS to your right push pin
+            label = "ENCODER_PRESS_RIGHT";
+        };
+    };
+};

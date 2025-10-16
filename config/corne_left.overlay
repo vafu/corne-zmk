@@ -5,11 +5,13 @@
     a-gpios = <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; 
     b-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; 
 };
-//
-// &gpio_keys {
-//     status = "okay";
-// };
-//
-// &encoder_press_left {
-//     gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-// };
+
+/ {
+    gpio_keys {
+        compatible = "zmk,gpio-keys";
+        encoder_press_left: encoder_press_left {
+            gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // CHANGE THIS to your left push pin
+            label = "ENCODER_PRESS_LEFT";
+        };
+    };
+};

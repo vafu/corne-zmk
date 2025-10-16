@@ -159,7 +159,8 @@
 &none  &kp Q         &kp W          &kp E         &kp R                &kp T           &kp Y        &kp U                &kp I               &kp O          &kp P            &none
 &none  &hm_l LGUI A  &hm_l LCTRL S  &hm_l LALT D  &hm_shift_l LSHFT F  &kp G           &kp H        &hm_shift_r RSHFT J  &hm_r RIGHT_ALT K   &hm_r RCTRL L  &hm_r RGUI SEMI  &none
 &none  &kp Z         &kp X          &kp C         &kp V                &kp B           &kp N        &kp M                &kp COMMA           &kp DOT        &kp FSLH         &none
-                                    &mo 5         &lt 1 SPACE          &lt 4 ESCAPE    &lt 4 ENTER  &lt 2 BSPC           &lt 6 LOCKING_CAPS
+                                    &mo 5         &lt 1 SPACE          &lt 4 ESCAPE    &lt 4 ENTER  &lt 2 BSPC           &lt 6 LOCKING_CAPS 
+                                                                       &lt 5 C_MUTE     &lt 7 LC(W)
             >;
 
             sensor-bindings =
@@ -174,6 +175,7 @@
 &trans  &hm_l LGUI AMPS  &hm_l LCTRL EQUAL  &hm_l LEFT_ALT LBRC  &hm_shift_l LSHIFT RBRC  &kp MINUS     &kp UNDER      &hm_shift_r RSHFT DOUBLE_QUOTES  &hm_r RALT SINGLE_QUOTE  &hm_r RCTRL AT  &hm_r RGUI COLON  &trans
 &trans  &kp PIPE         &kp ASTRK          &kp LESS_THAN        &kp GREATER_THAN         &kp PLUS      &kp BACKSLASH  &kp CARET                        &kp TILDE                &trans          &kp TILDE         &trans
                                             &trans               &trans                   &trans        &kp TAB        &kp BACKSPACE                    &kp DEL
+                                                                       &trans     &trans
             >;
 
             sensor-bindings =
@@ -188,6 +190,7 @@
 &trans  &kp LGUI    &kp LCTRL  &kp LEFT_ALT  &kp LSHIFT   &trans     &kp LEFT       &kp DOWN        &kp UP           &kp RIGHT             &kp LC(CARET)          &trans
 &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY    &kp K_PASTE  &trans     &kp PAGE_DOWN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LC(LEFT_BRACKET)  &kp LC(RIGHT_BRACKET)  &trans
                                &trans        &trans       &trans     &trans         &trans          &trans
+                                                      &trans        &trans
             >;
 
             sensor-bindings =
@@ -202,6 +205,7 @@
 &none       &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
 &none       &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
                                         &none         &none         &none           &none  &none  &none
+                                          &trans &trans
             >;
         };
 
@@ -211,9 +215,26 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0     &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &trans
                         &trans  &trans  &trans    &trans        &trans        &trans
+                                          &trans &trans
             >;
 
             label = "number";
+        };
+
+                Media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans  
+                                          &trans &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp K_PREVIOUS K_NEXT>,
+                <&inc_dec_kp K_PREVIOUS K_NEXT>;
+
+            label = "Media";
         };
 
         mouse {
@@ -222,11 +243,27 @@
 &none  &kp LGUI  &kp LCTRL  &kp LEFT_ALT  &kp LSHFT  &none    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mmv MOVE_UP  &none
 &none  &none     &none      &none         &none      &none    &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &none            &none         &none
                             &none         &none      &none    &mkp LCLK       &mkp MCLK       &mkp RCLK
+                                          &trans &trans
             >;
 
             sensor-bindings = <&etch_y>, <&etch_x>;
 
             label = "Mouse";
+        };
+
+        browser {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans           &trans  &trans  &trans  
+                                                &kp LC(LS(T))    &trans
+            >;
+
+            label = "browser";
+            sensor-bindings =
+                <&inc_dec_kp LA(LEFT_ARROW) LA(RIGHT_ARROW)>,
+                <&inc_dec_kp LC(PG_UP) LC(PAGE_DOWN)>;
         };
 
         WM {
@@ -235,6 +272,7 @@
 &trans  &kp LCMD  &kp LCTRL  &kp LEFT_ALT  &kp LSHIFT  &trans    &trans  &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &trans  &trans
 &trans  &trans    &trans     &trans        &trans      &trans    &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans
                              &trans        &trans      &trans    &trans  &trans            &trans
+                                                       &trans    &trans
             >;
 
             label = "WM";
