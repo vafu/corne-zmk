@@ -12,6 +12,11 @@
         zmk,kscan = &kscan_composite;
     };
 
+        direct_keys: direct_keys {
+            compatible = "zmk,kscan-gpio-direct";
+            status = "okay";
+            input-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Encoder Press Pin
+        };
     kscan_composite: kscan_composite {
         compatible = "zmk,kscan-composite";
         matrix {
@@ -20,12 +25,6 @@
         direct {
             kscan = <&direct_keys>;
             row-offset = <4>;
-        };
-
-        direct_keys: direct_keys {
-            compatible = "zmk,kscan-gpio-direct";
-            status = "okay";
-            input-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Encoder Press Pin
         };
     };
 };
