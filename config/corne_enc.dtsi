@@ -2,14 +2,14 @@
     // Define skeleton for the left encoder
     encoder_left: encoder_1 {
         compatible = "alps,ec11";
-        steps = <4>;
+        steps = <80>;
         status = "disabled";
     };
 
     // Define skeleton for the right encoder
     encoder_right: encoder_2 {
         compatible = "alps,ec11";
-        steps = <4>;
+        steps = <80>;
         status = "disabled";
     };
     //
