@@ -148,11 +148,7 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder_left &encoder_right>;
     };
-
-    encoder_press_left : encoder_press_left {
-		compatible = "zmk,keymap-input-consumer";
-	};
-
+ 
     keymap {
         compatible = "zmk,keymap";
 

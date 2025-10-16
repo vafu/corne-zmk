@@ -23,4 +23,13 @@
         label = "ENCODER_PRESS_RIGHT";
     };
     };
+    chosen {
+        zmk,kscan = &kscan_composite;
+    };
+
+    kscan_composite: kscan_composite {
+        compatible = "zmk,kscan-composite";
+        kscans = <&kscan0 &gpio_keys>;
+    };
+
 };
