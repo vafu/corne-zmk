@@ -144,11 +144,9 @@
         };
     };
 
-    scroll_encoder: scroll_encoder {
+    sensors: sensors {
         compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
+        sensors = <&left_encoder &right_encoder>;
         tap-ms = <50>;
     };
 
@@ -178,7 +176,9 @@
                                             &trans               &trans                   &trans        &kp TAB        &kp BACKSPACE                    &kp DEL
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         raise_layer {

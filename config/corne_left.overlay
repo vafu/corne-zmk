@@ -3,7 +3,7 @@
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>; // CHANGE THIS: Left A pin
         b-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;  // CHANGE THIS: Left B pin
-        steps = <80>;
+        steps = <20>;
         status = "okay";
     };
     gpio_keys {
