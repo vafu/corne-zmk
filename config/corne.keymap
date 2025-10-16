@@ -146,7 +146,7 @@
 
     sensors: sensors {
         compatible = "zmk,behavior-sensor-rotate";
-        sensors = <&left_encoder &right_encoder>;
+        sensors = <&encoder_left &encoder_right>;
         tap-ms = <50>;
     };
 
