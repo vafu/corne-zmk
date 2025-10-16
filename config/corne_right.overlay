@@ -3,8 +3,8 @@
 // Enable and configure the right-side hardware
 &encoder_right {
     status = "okay";
-    a-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>; // CHANGE THIS: Right A pin
-    b-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;  // CHANGE THIS: Right B pin
+    a-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // CHANGE THIS: Right A pin
+    b-gpios = <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // CHANGE THIS: Right B pin
 };
 
 // &gpio_keys {
