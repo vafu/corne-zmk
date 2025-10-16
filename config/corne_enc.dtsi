@@ -12,16 +12,15 @@
         steps = <80>;
         status = "disabled";
     };
-
+gpio_keys {
+    compatible = "zmk,gpio-keys";
+    status = "disabled";
     encoder_press_left: encoder_press_left {
-        compatible = "zmk,gpio-keys";
-        status = "disabled";
         label = "ENCODER_PRESS_LEFT";
     };
 
     encoder_press_right: encoder_press_right {
-        compatible = "zmk,gpio-keys";
-        status = "disabled";
         label = "ENCODER_PRESS_RIGHT";
+    };
     };
 };
