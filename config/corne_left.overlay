@@ -8,7 +8,7 @@
 
 &gpio_keys {
     status = "okay";
-}
+};
 
 &encoder_press_left {
     status = "okay";
