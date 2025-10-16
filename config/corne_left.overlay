@@ -5,11 +5,11 @@
     a-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>; 
     b-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>; 
 };
-
-&gpio_keys {
-    status = "okay";
-};
-
-&encoder_press_left {
-    gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-};
+//
+// &gpio_keys {
+//     status = "okay";
+// };
+//
+// &encoder_press_left {
+//     gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+// };
