@@ -13,7 +13,7 @@
 
 &kscan_composite {
     direct_left {
-        kscan = <&direct_keys_right>;
+        kscan = <&direct_keys_left>;
         row-offset = <4>;
         col-offset = <5>; 
     };
