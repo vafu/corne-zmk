@@ -29,13 +29,15 @@
     };
 
     direct_keys_left: direct_keys_left {
+        status = "disabled";
         compatible = "zmk,kscan-gpio-direct";
-        label = "DIRECT_KEYS_L";
+        label = "DIRECT_KEYS_LEFT";
     };
 
     direct_keys_right: direct_keys_right {
+        status = "disabled";
         compatible = "zmk,kscan-gpio-direct";
-        label = "DIRECT_KEYS_R";
+        label = "DIRECT_KEYS_RIGHT";
     };
 
     kscan_composite: kscan_composite {
