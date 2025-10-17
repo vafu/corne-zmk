@@ -7,6 +7,10 @@
     b-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // CHANGE THIS: Right B pin
 };
 
+&encoder_transform {
+    col-offset = <6>;
+}
+
 / { 
     direct_keys: direct_keys {
         compatible = "zmk,kscan-gpio-direct";
@@ -24,7 +28,7 @@
         direct {
             kscan = <&direct_keys>;
             row-offset = <4>;
-            // col-offset = <1>;
+            col-offset = <4>;
         };
     };
 
