@@ -20,7 +20,7 @@
         direct_keys: direct_keys {
             compatible = "zmk,kscan-gpio-direct";
             input-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-            label = "DIRECT_KEYS"
+            label = "DIRECT_KEYS";
         };
         
     kscan_composite: kscan_composite {
