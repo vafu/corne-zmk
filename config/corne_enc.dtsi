@@ -1,3 +1,5 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
 / {
     // Define skeleton for the left encoder
     encoder_left: encoder_1 {
