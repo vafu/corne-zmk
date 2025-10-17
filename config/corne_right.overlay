@@ -20,6 +20,6 @@
     direct_right {
         kscan = <&direct_keys_right>;
         row-offset = <4>;
-        col-offset = <6>; // This maps it to the key at row 4, col 6
+        col-offset = <6>;
     };
 };
