@@ -23,6 +23,7 @@
         direct {
             kscan = <&direct_keys>;
             row-offset = <4>;
+            col-offset = <4>;
         };
     };
 
