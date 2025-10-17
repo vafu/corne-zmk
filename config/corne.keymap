@@ -144,7 +144,7 @@
        &hm_l LGUI A  &hm_l LCTRL S  &hm_l LALT D  &hm_shift_l LSHFT F  &kp G           &kp H        &hm_shift_r RSHFT J  &hm_r RIGHT_ALT K   &hm_r RCTRL L  &hm_r RGUI SEMI  
        &kp Z         &kp X          &kp C         &kp V                &kp B           &kp N        &kp M                &kp COMMA           &kp DOT        &kp FSLH         
                                     &mo 5         &lt 1 SPACE          &lt 4 ESCAPE    &lt 4 ENTER  &lt 2 BSPC           &lt 6 LOCKING_CAPS 
-                                                                       &kp A           &lt 8 LC(W) 
+                                                                       &lt 5 C_MUTE    &lt 8 LC(W) 
             >;
 
             sensor-bindings =
