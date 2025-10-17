@@ -6,25 +6,4 @@
     b-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; 
 };
 
-/ { 
-        direct_keys: direct_keys {
-            compatible = "zmk,kscan-gpio-direct";
-            input-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-            label = "DIRECT_KEYS";
-        };
-        
-    kscan_composite: kscan_composite {
-        compatible = "zmk,kscan-composite";
-        columns = <12>;
-        rows = <5>;
-        matrix {
-            kscan = <&kscan0>;
-        };
-        direct {
-            kscan = <&direct_keys>;
-            row-offset = <4>;
-            col-offset = <4>;
-        };
-    };
 
-};
