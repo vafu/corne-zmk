@@ -11,3 +11,6 @@
     col-offset = <6>;
 };
 
+&direct_keys {
+    input-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+}
