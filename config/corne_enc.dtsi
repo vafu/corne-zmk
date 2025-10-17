@@ -45,11 +45,5 @@
         matrix {
             kscan = <&kscan0>;
         };
-        direct_left {
-            kscan = <&direct_keys_left>;
-        };
-        direct_right {
-            kscan = <&direct_keys_right>;
-        };
     };
 };
