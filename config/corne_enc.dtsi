@@ -30,12 +30,12 @@
 
     direct_keys_left: direct_keys_left {
         compatible = "zmk,kscan-gpio-direct";
-        label = "DIRECT_KEYS";
+        label = "DIRECT_KEYS_L";
     };
 
     direct_keys_right: direct_keys_right {
         compatible = "zmk,kscan-gpio-direct";
-        label = "DIRECT_KEYS";
+        label = "DIRECT_KEYS_R";
     };
 
     kscan_composite: kscan_composite {
