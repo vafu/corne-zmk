@@ -29,6 +29,7 @@
 / {
     chosen {
         zmk,kscan = &kscan_composite;
+        zmk,matrix_transform = &encoder_transform;
     };
 
     etch_y: etch_y {
