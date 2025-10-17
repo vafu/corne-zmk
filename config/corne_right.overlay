@@ -13,7 +13,7 @@
 
 &direct_keys_right {
     status = "okay";
-    input-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    input-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 };
 
 &kscan_composite {
