@@ -1,3 +1,7 @@
+&kscan0 {
+    status = "disabled";
+};
+
 / {
     // Define skeleton for the left encoder
     encoder_left: encoder_1 {
