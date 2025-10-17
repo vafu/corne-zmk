@@ -11,12 +11,7 @@
     col-offset = <6>;
 };
 
-&direct_keys {
+&direct_keys_right {
     input-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 };
 
-&kscan_composite {
-    direct {
-        col-offset = <6>;
-    };
-};

@@ -6,6 +6,6 @@
     b-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; 
 };
 
-&direct_keys {
+&direct_keys_left {
     input-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 };

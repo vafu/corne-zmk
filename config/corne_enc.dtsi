@@ -28,20 +28,30 @@
         >;
     };
 
-    direct_keys: direct_keys {
+    direct_keys_left: direct_keys_left {
         compatible = "zmk,kscan-gpio-direct";
         label = "DIRECT_KEYS";
     };
-        
+
+    direct_keys_right: direct_keys_right {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "DIRECT_KEYS";
+    };
+
     kscan_composite: kscan_composite {
         compatible = "zmk,kscan-composite";
         matrix {
             kscan = <&kscan0>;
         };
         direct {
-            kscan = <&direct_keys>;
+            kscan = <&direct_keys_left>;
             row-offset = <4>;
             col-offset = <5>;
+        };
+        direct {
+            kscan = <&direct_keys_right>;
+            row-offset = <4>;
+            col-offset = <6>;
         };
     };
 };
