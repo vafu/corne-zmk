@@ -14,3 +14,9 @@
 &direct_keys {
     input-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 };
+
+&kscan_composite {
+    direct {
+        col-offset = <6>;
+    };
+};
